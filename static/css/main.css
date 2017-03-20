@@ -7947,7 +7947,7 @@ a.card:hover {
     content: '';
     width: 56px;
     height: 56px;
-    background-image: url(../images/play-icon.svg);
+    background-image: url(../images/play-icon.svg?ver=1);
     background-repeat: no-repeat;
     background-size: cover; }
     @media screen and (max-width: 1200px) {
