@@ -22,7 +22,7 @@ gulp.task('minify-css', function () {
 });
 
 
-gulp.task('styles', function() {
+gulp.task('styles', ['minify-css'], function() {
     return gulp.src([
             './assets/styles/main.scss',
             './assets/scripts/plugins/jquery.fancybox/source/jquery.fancybox.css',
