@@ -65,6 +65,8 @@
 
 
     <!--placeholder temp -->
+    {% if articles|length > 0 %}
+
     <section class="featured-carousel">
         <!-- Swiper -->
         <div id="index-swiper" class="swiper-container">
@@ -159,7 +161,10 @@
 
         </div>
     </section><!--featured-carousel-->
+    {% endif %}
 
+
+    
     <section class="content-block container">
         <div class="row">
 
