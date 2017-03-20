@@ -1,0 +1,44 @@
+{% set networkData = _Network.getNetworkData() %}
+
+{% set blogInfo = _Blog.getBlog() %}
+{{ set(this, 'title', blogInfo.title) }}
+
+
+{{this.registerJs("HomeController.listing();")}}
+{{this.registerJs("HomeController.blog();")}}
+
+{% set limit = 20 %}
+
+{% set articlesArr = _Blog.getBlogFeed({'limit': limit, 'offset': 0}) %}
+{% set articles = articlesArr.articles %}
+
+
+{% set status = 'follow' %}
+{% set text = 'Follow +' %}
+{% if not _User.isGuset() and _User.isUserFollowing('blog', article.blog['id'])%}
+    {% set status = 'unfollow' %}
+    {% set text = 'Following -' %}
+{% endif %}
+
+
+
+
+<!-- used to index each article as we loop over throughout the template -->
+{% set articleCount = 0 %}
+
+
+
+    <!--placeholder temp -->
+    <section class="screen-carousel">
+
+        <div id="screen-swiper" class="swiper-container">
+            <div class="swiper-wrapper">
+                {% for i in 0..2 %}
+                    {% if articles[i] %}                                                                
+                        {{this.render('partials/_screen-article.twig', {article: articles[i], position: (i+1), containerClass: 'swiper-slide', swap: 'false'}) | raw}}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+    </section>
