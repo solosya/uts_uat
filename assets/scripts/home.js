@@ -142,7 +142,6 @@ HomeController.Listing = (function ($) {
                     var destObject      = $(this);
                     var sourceProxy     = null;
                     var destProxy       = null;
-                    console.log(this);
 
                     if (typeof sourceObj.data('proxyfor') !== 'undefined') {
                         sourceProxy = sourceObj;
@@ -156,8 +155,6 @@ HomeController.Listing = (function ($) {
                         destObject.attr('data-position', sourceObj.data('position'));
                     }
 
-                    console.log(destObject);
-                    console.log(sourceObj);
 
                     //get positions
                     var sourcePosition      = sourceObj.data('position');
@@ -167,7 +164,6 @@ HomeController.Listing = (function ($) {
                     var destinationPostId   = parseInt(destObject.data('id'));
                     var destinationIsSocial = parseInt(destObject.data('social'));
 
-                    console.log(destinationPosition, destinationPostId, destinationIsSocial);
 
                     var swappedDestinationElement = sourceObj.clone().removeAttr('style').insertAfter( destObject );
                     var swappedSourceElement = destObject.clone().insertAfter( sourceObj );
@@ -215,7 +211,7 @@ HomeController.Listing = (function ($) {
                         
                         _csrf: csrfToken
                     };
-                    console.log(postData);
+
                     $.ajax({
                         url: _appJsConfig.baseHttpPath + '/home/swap-article',
                         type: 'post',
@@ -231,7 +227,7 @@ HomeController.Listing = (function ($) {
                             initSwap();
                         },
                         error: function(jqXHR, textStatus, errorThrown){
-                            $().General_ShowErrorMessage({message: jqXHR.responseText});
+                            // $().General_ShowErrorMessage({message: jqXHR.responseText});
                         },
                         beforeSend: function(jqXHR, settings) { 
                         },
