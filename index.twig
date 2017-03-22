@@ -73,7 +73,7 @@
             <div class="swiper-wrapper">
 
                     {% if articles[0] %}                                                                
-                        {{this.render('partials/_single-article.twig', {article: articles[0], position: (1), containerClass: 'swiper-slide', swap: 'false'}) | raw}}
+                        {{this.render('partials/_single-article.twig', {article: articles[0], position: (1), containerClass: 'swiper-slide'}) | raw}}
                         {% set articleCount = articleCount + 1 %}
                     {% endif %}
 
@@ -84,22 +84,22 @@
                     <h2>TOP STORIES</h2>
 
                     {% if articles[1] %}
-                        {{this.render('partials/_single-article.twig', {article: articles[1], position: (2), containerClass: 'slide-1 pagination-item swap active'}) | raw}}
+                        {{this.render('partials/_single-article.twig', {article: articles[1], position: (2), containerClass: 'slide-1 pagination-item active'}) | raw}}
                         {% set articleCount = articleCount + 1 %}
                     {% endif %}
     
                     {% if articles[2] %}
-                        {{this.render('partials/_single-article.twig', {article: articles[2], position: (3), containerClass: 'slide-1 pagination-item swap'}) | raw}}
+                        {{this.render('partials/_single-article.twig', {article: articles[2], position: (3), containerClass: 'slide-1 pagination-item'}) | raw}}
                         {% set articleCount = articleCount + 1 %}
                     {% endif %}
 
                     {% if articles[3] %}
-                        {{this.render('partials/_single-article.twig', {article: articles[3], position: (4), containerClass: 'slide-1 pagination-item swap'}) | raw}}
+                        {{this.render('partials/_single-article.twig', {article: articles[3], position: (4), containerClass: 'slide-1 pagination-item'}) | raw}}
                         {% set articleCount = articleCount + 1 %}
                     {% endif %}
 
                     {% if articles[4] %}
-                        {{this.render('partials/_single-article.twig', {article: articles[4], position: (5), containerClass: 'slide-1 pagination-item swap'}) | raw}}
+                        {{this.render('partials/_single-article.twig', {article: articles[4], position: (5), containerClass: 'slide-1 pagination-item'}) | raw}}
                         {% set articleCount = articleCount + 1 %}
                     {% endif %}
                 </section><!--custom-pagination-->
@@ -218,7 +218,7 @@
         <div class="row">
             <div class="col-md-3 col-sm-12">
                 <aside class="right-border">
-                    <section class="top-stories">
+                    <section class="top-stories-sidebar">
                         <h2>MOST VIEWED<br /> STORIES</h2>
 
                         {% if popularArticles|length > 0 %}
