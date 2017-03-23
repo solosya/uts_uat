@@ -37,8 +37,10 @@ $('document').ready(function() {
     stickHeader = function(){
         if ( isScrolledPass() ){
             $("#masthead").addClass("stick");
+            $("#main-logo").addClass("small");
         } else {
             $("#masthead").removeClass("stick");
+            $("#main-logo").removeClass("small");
         }
         return false;
     };   
