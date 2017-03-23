@@ -117,9 +117,9 @@
             height: 38px;
             fill: #fff;
 
-            @media screen and (max-width: $logo-break) and (min-width: $menu-break) {
-                display: none;
-            }
+            // @media screen and (max-width: $logo-break) and (min-width: $menu-break) {
+            //     display: none;
+            // }
 
             @media screen and (max-width: $mobile-break) {
 

@@ -7153,9 +7153,6 @@ time {
       width: 250px;
       height: 38px;
       fill: #fff; }
-      @media screen and (max-width: 1580px) and (min-width: 1260px) {
-        .site-header .navbar-brand .navbar-brand-name {
-          display: none; } }
       @media screen and (max-width: 620px) {
         .site-header .navbar-brand .navbar-brand-name {
           margin: 44px 0 0 23px;

@@ -48,12 +48,6 @@
                     </figure>
                 {% endif %}
 
-                {% if cardClass == 'soundcloud' %}  
-                    <div class="other-content">
-                        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/289583160&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_artwork=false"></iframe>
-                    </div>
-                {% endif %}
-
 
                 <div class="content">
                     <span class="category">{{article.label}}</span>
@@ -61,10 +55,6 @@
                     <h2>{{ articleTitle }}</h2>
                     <span class="author">{{ article.createdBy['displayName'] }}</span>
                     
-                    {% if cardClass != 'instagram no-caption' %}  
-                        <p>{{ article.excerpt | raw }}</p>
-                    {% endif %}
-
                 </div>
             </article>
 
@@ -126,8 +116,8 @@
                     <span class="category">{{social.source}}</span>
                     <span class="article-icon"></span>
                     <time datetime="2016-11-16">{{_AppHelper.getDateTimeBasedOnTimezone(social.publishDate,'d M Y')}}</time>
-{#                     <h2>{{ articleTitle | raw }}</h2>
- #}                  <span class="author">{{ (social.source == _Article.socialArticleSourceTwitter()) ? '@' : ''}}{{ social.user['name'] | lower }}</span>
+
+                    <span class="author">{{ (social.source == _Article.socialArticleSourceTwitter()) ? '@' : ''}}{{ social.user['name'] | lower }}</span>
                     
                     {% if cardClass != 'instagram no-caption' %}  
                         <p id="updateSocial{{article.socialId}}" data-update="0">
@@ -135,10 +125,7 @@
                                              | raw }}</p>
                     {% endif %}
 
-{#                     <div class="share">
-                        <span class="sr-only">Share</span><span class="share-icon icon"></span>
-                    </div>
- #}                </div>
+                </div>
             </article>
 
             {% if article.userHasBlogAccess == '1' %}
