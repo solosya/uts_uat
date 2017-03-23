@@ -242,10 +242,12 @@
 
     <section class="content-block container">
         <div class="row section__content">
-            <div class="ajaxArticles col-sm-9 col-sm-offset-3" data-offset="2" data-existing-nonpinned-count="{{articlesArr.existingNonPinnedCount}}">
+            <div class="ajaxArticles clearfix col-sm-9 col-sm-offset-3" 
+            data-offset="{{limit}}" 
+            data-existing-nonpinned-count="{{articlesArr.existingNonPinnedCount}}">
                 
             </div>
-            <a class="loadMoreArticles col-sm-9 col-sm-offset-3" href="#">Load more <i class="fa fa-refresh"></i></a>
+            <a class="loadMoreArticles col-sm-9 col-sm-offset-3" href="#">LOAD MORE</a>
         </div>
 
         {% set noDataCls = 'hide' %}

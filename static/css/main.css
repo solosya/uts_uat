@@ -6876,6 +6876,20 @@ body.no_profile .profile_overlay {
 .menu-background {
   background: #1a1a1a; }
 
+.loadMoreArticles {
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid black;
+  width: 160px;
+  height: 45px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.23077em;
+  line-height: 40px;
+  color: black;
+  float: none; }
+
 .hide {
   display: none !important; }
 
@@ -7875,24 +7889,17 @@ a.card:hover {
     background-position: center top; }
   .card figure.video:before {
     position: absolute;
-    top: 45%;
-    left: 45%;
+    top: 50%;
+    left: 50%;
     content: '';
     width: 56px;
     height: 56px;
     background-image: url(../images/play-icon.svg?ver=1);
     background-repeat: no-repeat;
-    background-size: cover; }
-    @media screen and (max-width: 1200px) {
-      .card figure.video:before {
-        top: 40%;
-        left: 35%;
-        width: 40px;
-        height: 40px; } }
-    @media screen and (max-width: 769px) {
-      .card figure.video:before {
-        width: 30px;
-        height: 30px; } }
+    background-size: cover;
+    z-index: 10;
+    margin-left: -28px;
+    margin-top: -28px; }
   .card figure img {
     max-width: 100%; }
   .card time {
@@ -8173,7 +8180,8 @@ a.card:hover {
           font-size: 1.38462em; } }
     .card-sm .card.other figure {
       margin-left: 0;
-      margin-right: 0; }
+      margin-right: 0;
+      position: relative; }
     .card-sm .card.other article > .content:first-child {
       padding-top: 87px; }
   .card-sm .card.facebook {
@@ -8354,6 +8362,9 @@ a.card:hover {
     bottom: 0;
     left: 0;
     right: 0; }
+    .card-md .card figure.video:before {
+      top: auto;
+      bottom: 30px; }
     .card-md .card figure:after {
       content: '';
       opacity: 0.3;
@@ -8471,6 +8482,11 @@ a.card:hover {
     bottom: 0;
     width: 100%;
     z-index: 0; }
+    .card-lg .card figure.video:before {
+      width: 36px;
+      height: 36px;
+      margin-left: -18px;
+      margin-top: -18px; }
     .card-lg .card figure:after {
       content: '';
       opacity: 0.3;
@@ -9908,7 +9924,13 @@ body.Screen {
       .top-stories a.card article figure {
         position: static;
         margin-right: 14px;
-        float: left; }
+        float: left;
+        position: relative; }
+        .top-stories a.card article figure.video:before {
+          width: 36px;
+          height: 36px;
+          margin-left: -18px;
+          margin-top: -18px; }
         .top-stories a.card article figure img {
           max-width: 100%; }
       .top-stories a.card article .content {
