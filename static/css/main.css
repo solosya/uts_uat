@@ -9951,7 +9951,7 @@ body.Screen {
             .top-stories a.card article .content h2 {
               margin-top: .3em;
               height: 60px; } }
-        .top-stories a.card article .content > p {
+        .top-stories a.card article .content > p.excerpt {
           display: none; }
         .top-stories a.card article .content .author {
           display: none; }
@@ -10860,7 +10860,6 @@ body.channel.about .staff {
   body.channel.about .staff__photo {
     height: 210px;
     width: 210px;
-    background: orange;
     text-align: center; }
     @media screen and (max-width: 992px) {
       body.channel.about .staff__photo {
