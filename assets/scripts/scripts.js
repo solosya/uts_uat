@@ -112,7 +112,7 @@ $('document').ready(function() {
         effect: 'fade',
         pagination: '.swiper-paginations',
         paginationClickable: true,
-        autoplay: 2500,
+        autoplay: 20000,
         autoplayDisableOnInteraction: false
     });
 

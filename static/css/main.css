@@ -9671,12 +9671,23 @@ button.swiper-pagination-bullet {
 html {
   height: 100%; }
 
-body.Screen {
+body.screen {
   height: 100%;
   background: pink; }
+  body.screen .site-footer {
+    display: none; }
+  body.screen .site-header {
+    display: none; }
+  body.screen .top-bar {
+    display: none; }
 
 .screen-carousel {
   height: 100%; }
+  .screen-carousel .screen_logo {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 20; }
   .screen-carousel .card {
     position: relative;
     color: #fefefe; }
@@ -9720,7 +9731,7 @@ body.Screen {
       .screen-carousel .card .content p {
         font-size: 1.92308em;
         font-weight: 400;
-        height: 80px;
+        height: 60px;
         overflow: hidden; }
         @media screen and (max-width: 490px) {
           .screen-carousel .card .content p {
@@ -9789,6 +9800,9 @@ body.Screen {
   .screen-carousel .swiper-container {
     width: 100%;
     height: 100%; }
+    .screen-carousel .swiper-container .swiper-wrapper {
+      width: 100%;
+      height: 100%; }
   .screen-carousel .swiper-slide {
     background-position: center;
     background-size: cover; }
