@@ -24,8 +24,8 @@
     {% set publishDate = _AppHelper.getDefaultTimezoneDateTime(article.publishDate) %}
     {% set articleTitle =  quotes.smarten(titleTruncateLength is defined ? article.title | truncate(titleTruncateLength) : article.title)  %}
     {% set swap = swap is defined and swap == 'false' ? '' : 'swap'  %}
+    {% set imageSuppress = imageSuppress is defined and imageSuppress == 'true' ? 'true' : 'false'  %}
     {% set articleImg = _Media.getMediaUrl(article.featuredMedia,imgWidth, imgHeight, {'crop': 'fill', 'gravity': 'faces'} ) %}
-
 
     <div class="{{containerClass}}">
         <a  href="{{article.url}}" 
@@ -38,7 +38,7 @@
             data-article-text="{{Helper.htmlToText(article.title, -1) | raw | escape('html')}}">
 
             <article class="">
-                {% if article.hasMedia == 'TRUE' %}
+                {% if article.hasMedia == 'TRUE' and imageSuppress == 'false' %}
                     <figure class="{{ figureClass }}">
                         {% if lazyload == false %}
                             <div class="image-wrapper" {% if articleImg is not empty %} style="background-image:url('{{articleImg}}');" {%endif%}></div>
@@ -85,14 +85,14 @@
 
 {% else %}
 
-    {% set social = article.social %}
+    {% set social     = article.social %}
     {% set mediaClass = (social.hasMedia == 'TRUE') ? 'withImage__content' : 'without__image' %}
-    {% set videoClass = (social.media['type'] == 'video') ? 'video_card' : '' %}
+    {% set videoClass = (social.media['type'] == 'video') ? 'video' : '' %}
     {% set hasArticleMediaClass = (social.hasMedia == 'TRUE') ? 'withImage__content': 'without__image' %}
 
     <div class="{{containerClass}}">
         <a  href="{{social.url}}"
-            class="swap card {{ social.source }}  {{hasArticleMediaClass}}" 
+            class="swap card social {{ social.source }}  {{hasArticleMediaClass}}" 
             id="Social{{article.socialId}}"
             data-id="{{article.socialId}}" 
             data-position="{{position}}" 
@@ -102,7 +102,7 @@
 
             <article class="">
                 {% if social.hasMedia == 'TRUE' %}  
-                    <figure>
+                    <figure class="{{ videoClass }}">
                         <div class="image-wrapper lazyload" data-original="{{social.media['path']}}" {% if social.media['path'] is not empty %} style="background-image:url('{{placeholder}}');"{%endif%}></div>
                     </figure>
                 {% endif %}

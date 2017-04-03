@@ -41,11 +41,12 @@
     {% if _AppHelper.getApplicationEnv() == 'PROD'%}
         <link rel="stylesheet" href="{{networkData.templatePath}}/static/css/main.min.css?ver=11" type="text/css" media="all">
     {% else %}
-        <link type="text/css" rel="stylesheet" href="{{networkData.templatePath}}/assets/scripts/plugins/jquery.fancybox/source/jquery.fancybox.css" />
+{#         <link type="text/css" rel="stylesheet" href="{{networkData.templatePath}}/assets/scripts/plugins/jquery.fancybox/source/jquery.fancybox.css" />
         <link type="text/css" rel="stylesheet" href="{{networkData.templatePath}}/assets/scripts/plugins/jquery.noty-2.3.8/demo/animate.css" />
-        <link type="text/css" rel="stylesheet" href="{{_AppHelper.getAssetsSDKPath()}}/js/media-player/mediaelementplayer.css" />
-        <link rel='stylesheet' href='{{networkData.templatePath}}/static/css/main.css?ver=19' type='text/css' media='all' />
+        <link type="text/css" rel="stylesheet" href="{{_AppHelper.getAssetsSDKPath()}}/js/media-player/mediaelementplayer.css" />#}        
+        <link rel='stylesheet' href='{{networkData.templatePath}}/static/css/main.css?ver=27' type='text/css' media='all' />
     {% endif %}
+    <link rel="stylesheet" type="text/css" href="{{networkData.templatePath}}/assets/scripts/plugins/tipped-4.6.0-light/css/tipped/tipped.css?ver=1"/>
 
     <script src="https://use.typekit.net/unp4tin.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>

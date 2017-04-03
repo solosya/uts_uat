@@ -89,12 +89,11 @@ $('document').ready(function() {
         }
     });
 
-      $('#profile').on('click', function(e) {
-        
+    $('#profile').on('click', function(e) {
         $('#header__menu').toggleClass('Profile_Open');
         $('body').toggleClass('no_profile');
         e.preventDefault();
-      });
+    });
 
     cardHolder = '';
 
@@ -114,6 +113,12 @@ $('document').ready(function() {
         paginationClickable: true,
         autoplay: 20000,
         autoplayDisableOnInteraction: false
+    });
+
+    Tipped.create('.tool_tipped', {
+        maxWidth: 150,
+        offset: { x: 0, y: -35 },
+
     });
 
 
