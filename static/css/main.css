@@ -10609,8 +10609,7 @@ html {
   height: 100%; }
 
 body.screen {
-  height: 100%;
-  background: pink; }
+  height: 100%; }
   body.screen .site-footer {
     display: none; }
   body.screen .site-header {
