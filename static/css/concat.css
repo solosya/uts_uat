@@ -8243,8 +8243,6 @@ a.card:hover {
   .card-sm .card article .content p {
     overflow: hidden;
     font-weight: 500; }
-  .card-sm .card.without__image {
-    padding-top: 100px; }
   .card-sm .card.other {
     border-bottom: solid 5.6px #231f20;
     padding-left: 0;
@@ -8281,8 +8279,14 @@ a.card:hover {
       position: relative; }
     .card-sm .card.other article > .content:first-child {
       padding-top: 87px; }
+  .card-sm .card.social {
+    border-bottom: solid 5.6px #231f20; }
+    .card-sm .card.social .content > p {
+      color: black;
+      height: 117px; }
   .card-sm .card.facebook {
-    color: black; }
+    color: black;
+    border-bottom: none; }
     .card-sm .card.facebook .content {
       margin-top: -50px;
       position: relative; }
@@ -8301,7 +8305,8 @@ a.card:hover {
       margin-top: 0; }
   .card-sm .card.twitter {
     color: black;
-    background-color: #ffff00; }
+    background-color: #ffff00;
+    border-bottom: none; }
     .card-sm .card.twitter figure {
       border-bottom: 7.4px solid #FFF;
       max-height: 172px;
@@ -10882,7 +10887,8 @@ body.screen {
         width: 85px;
         height: 90px;
         margin-right: 11px;
-        float: left; }
+        float: left;
+        position: relative; }
         .aap-news .card article figure img {
           max-width: 100%; }
       .aap-news .card article .content .category {

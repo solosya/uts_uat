@@ -76,9 +76,9 @@
 
 
 
-        &.without__image {
-            padding-top:100px;
-        }
+        // &.without__image {
+        //     padding-top:100px;
+        // }
 
 
         &.other{
@@ -138,9 +138,25 @@
         }
 
 
+        &.social{ 
+
+            // &.without__image {
+            //     padding:
+            // }
+
+            border-bottom: solid 5.6px #231f20;
+            
+            .content {
+                > p {
+                    color:black;
+                    height: 117px;
+                }
+            }
+        }
 
         &.facebook{
             color:black;
+            border-bottom: none;
 
             .content {
                 margin-top: -50px;
@@ -176,7 +192,8 @@
         &.twitter {
             color:black;
             background-color: $brand-yellow;
-            
+            border-bottom: none;
+
             figure{
                 border-bottom: 7.4px solid #FFF;
                 max-height: 172px;
