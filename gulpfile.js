@@ -1,6 +1,6 @@
 var gulp = require ('gulp');
-// var concat = require('gulp-concat');
-var concat = require('gulp-concat-css');
+var concat = require('gulp-concat');
+// var concat = require('gulp-concat-css');
 var uglify = require('gulp-uglify');
 var gp_rename = require("gulp-rename");
 var gutil = require('gulp-util');
