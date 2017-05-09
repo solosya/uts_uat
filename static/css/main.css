@@ -8384,6 +8384,7 @@ a.card:hover {
     .card-sm .card article .content .share-icon {
       display: none; }
     .card-sm .card article .content p {
+      font-size: 1.3rem;
       overflow: hidden;
       font-weight: 500; }
   .card-sm .card.other {
