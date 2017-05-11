@@ -11731,6 +11731,8 @@ body.screen {
     line-height: inherit !important;
     font-family: inherit !important;
     letter-spacing: inherit !important; }
+  .page-content article .content p > iframe {
+    width: 100%; }
   .page-content article .content a {
     color: #0099cc;
     font-weight: 600; }
