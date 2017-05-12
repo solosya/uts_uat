@@ -7322,8 +7322,16 @@ body.Screen .top-bar {
       display: inline-block;
       float: left; }
       @media screen and (max-width: 620px) {
-        .site-header .navbar-brand img {
+        .site-header .navbar-brand img.main-logo {
           display: none; } }
+      .site-header .navbar-brand img.mobile-logo {
+        width: 48px;
+        height: 51px; }
+        @media screen and (min-width: 620px) {
+          .site-header .navbar-brand img.mobile-logo {
+            display: none; } }
+      .site-header .navbar-brand img.small {
+        height: 74px; }
     .site-header .navbar-brand div.reportage {
       margin-top: 10px;
       height: 60px;
@@ -10015,7 +10023,7 @@ button.swiper-pagination-bullet {
     background-color: transparent;
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 435px;
     z-index: 1;
     display: -webkit-box;
     display: -moz-box;
@@ -10030,6 +10038,9 @@ button.swiper-pagination-bullet {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box; }
+    @media screen and (max-width: 620px) {
+      .featured-carousel-index2 .card {
+        height: 300px; } }
     .featured-carousel-index2 .card figure {
       position: absolute;
       top: 0;
@@ -10678,7 +10689,7 @@ button.swiper-pagination-bullet {
   margin-bottom: 80px; }
   .top-stories_index2 > h2:first-child {
     margin-top: 15px;
-    font-size: 3.6rem;
+    font-size: 1.8rem;
     width: auto; }
     @media screen and (max-width: 992px) {
       .top-stories_index2 > h2:first-child {
@@ -10698,14 +10709,14 @@ button.swiper-pagination-bullet {
     font-weight: 500;
     color: #1a1818;
     background: none;
-    padding-bottom: 15px;
-    border-bottom: solid 2px rgba(229, 230, 231, 0.6); }
+    padding-bottom: 15px; }
     .top-stories_index2 a.card:before {
       background: none; }
     @media screen and (max-width: 620px) {
       .top-stories_index2 a.card {
         margin-bottom: 8px;
-        padding-bottom: 12px; } }
+        padding-bottom: 12px;
+        border-bottom: solid 2px rgba(229, 230, 231, 0.6); } }
     .top-stories_index2 a.card article {
       width: 100%;
       display: inline-block; }
@@ -10744,7 +10755,7 @@ button.swiper-pagination-bullet {
         .top-stories_index2 a.card article .content .category {
           display: none; }
         .top-stories_index2 a.card article .content h2 {
-          font-size: 1.7em;
+          font-size: 1.7rem;
           font-weight: 700;
           margin-top: .5em;
           margin-bottom: 0;
@@ -11129,7 +11140,7 @@ body.screen {
   .aap-news > a > h2:first-child {
     margin: 0px;
     margin-bottom: 4px;
-    font-size: 3.6rem;
+    font-size: 1.8rem;
     width: auto; }
     @media screen and (max-width: 992px) {
       .aap-news > a > h2:first-child {
